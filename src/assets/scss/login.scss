@@ -1,0 +1,74 @@
+//変数ファイルの読み込み
+@import "variables";
+
+//mixinファイルの読み込み
+@import "mixin";
+
+
+.login {
+  width: 60%;
+  margin: 0 auto;
+
+  li {
+    list-style: none;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+
+    img {
+      width: 40%;
+    }
+
+  }
+
+  &__password {
+    border-radius: 5px;
+    box-shadow: 0 1px 6px 0 $BOXSHDOW;
+    font-size: 24px;
+    height: 60px;
+    margin: 0 auto 40px;
+    max-width: 584px;
+    width: 40%;
+    border: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    &--icon {
+      font-size: 30px;
+      margin: 0 10px;
+      color: $MAINCOLOR;
+
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      height: 90%;
+      letter-spacing: 10px;
+      color: $MAINCOLOR;
+    }
+  }
+
+  .login__button {
+
+    button {
+      border-radius: 5px;
+      font-size: 24px;
+      font-weight: bold;
+      height: 60px;
+      margin: 0 auto 40px;
+      max-width: 584px;
+      width: 40%;
+      border: none;
+      background: $MAINCOLOR;
+      color: $WHITECOLOR;
+      box-shadow: 0 4px 0 darken($MAINCOLOR, 15%);
+
+      &:hover {
+        @include btn_hover;
+      }
+    }
+  }
+}

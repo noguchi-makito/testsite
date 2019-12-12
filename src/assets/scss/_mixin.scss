@@ -1,0 +1,5 @@
+//メインボタン
+@mixin btn_hover {
+  box-shadow: none;
+  transform: translate3d(0, 4px, 0);
+}

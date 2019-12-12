@@ -1,0 +1,142 @@
+//変数の読み込み
+@import "variables";
+
+//mixinファイルの読み込み
+@import "mixin";
+
+.column_2 {
+  display: flex;
+  justify-content: left;
+
+  .sidebanner {
+    text-align: left;
+    width: 20%;
+    ul {
+      list-style: none;
+    }
+
+    &__menu__list {
+      font-size: 20px;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &--icon {
+        font-size: 36px;
+        margin-right: 20px;
+        color: $MAINCOLOR;
+      }
+      &:hover {
+        background: lighten($MAINCOLOR, 50%);
+      }
+    }
+  }
+
+  .content {
+    width: 80%;
+    position: relative;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: left;
+      flex-flow: row wrap;
+    }
+
+    &__date__list {
+      background: #ccc;
+      box-shadow: 0 1px 6px 0 $BOXSHDOW;
+      height: 200px;
+      min-width: 200px;
+      border-radius: 3px;
+      transition: all .25s ease;
+      animation: populate .5s ease-out normal backwards;
+      margin: 5px;
+      overflow: hidden;
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+	      transition-duration: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+	        transition-duration: 0.3s;
+        }
+      }
+    }
+    //モーダルウィンドウ
+    .modal {
+      position: absolute;
+      width: 80%;
+      margin: auto;
+      top: 15%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 2;
+
+      &__inner {
+        width: 30%;
+        margin: 0px auto;
+
+        &__title {
+          color: $WHITECOLOR;
+          font-weight: 700;
+          font-size: 36px;
+        }
+
+        &__close {
+          position: absolute;
+          font-size: 48px;
+          color: $WHITECOLOR;
+          top: 3%;
+          right: 3%;
+        }
+
+        &__icon {
+          font-size: 160px;
+          color: $MAINCOLOR;
+          text-align: center;
+        }
+
+        &__list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 0;
+          margin: 0;
+
+          li {
+            width: 100%;
+          }
+
+          input {
+            border: none;
+            height: 40px;
+          }
+
+          button {
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            height: 40px;
+            margin: 0 auto 40px;
+            max-width: 584px;
+            width: 40%;
+            border: none;
+            background: #6BBD0A;
+            color: #FFFFFF;
+            -webkit-box-shadow: 0 4px 0 #427406;
+            box-shadow: 0 4px 0 #427406;
+          }
+        }
+
+      }
+    }
+  }
+
+}
